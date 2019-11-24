@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+  <html>
+	<head>
+	    <style>
+			body, html
+			{
+				padding: 0;
+				margin: 0;
+				
+			}
+			.wrapper
+			{
+				display: flex;
+				padding: 10px;
+				flex-direction: column;
+				background-color: #C6C6C6;
+			}
+			.hiddenDiv
+			{
+				display: flex;
+				justify-content: space-around;
+				max-height: 0px;
+				width: 100%;
+				overflow: hidden;
+				transition: max-height 0.2s ease;
+			}
+			button
+			{
+				flex-grow: 1;
+				font-family: "courier-std", courier, monospace;
+				border: none;
+				background-color: #EFEFEF;
+				margin: 5px;
+				font-weight: bold;
+			}
+			button:active
+			{
+				background-color: white;
+			}
+			button:focus
+			{
+				outline: 0;
+			}
+			.column
+			{
+				display: flex;
+				flex-direction: column;
+			}
+			.row
+			{
+				display: flex;
+				justify-content: space-around;
+			}
+	    </style>
+	</head>
+	<body>
+		<div class = "wrapper">
+			<button id = "load">Load Annotations</button>
+			<div class="hiddenDiv" id="loadOptions">
+				<div class= "column">
+						<input type="file" id = "file" accept=".json" style="width:100%;">
+					<div class = "row">
+						<button id="merge">Merge</button>
+						<button id="replace">Replace</button>
+						<button id="cancelLoad">Cancel</button>
+					</div>
+				</div>
+			</div>
+			<button id = "save">Save Current Annotations to File</button>
+			<button id = "delete">Delete Current Annotations</button>
+			<div class="hiddenDiv" id="confirmDiv">
+				<button id="confirm">Delete</button>
+				<button id="cancelDel">Cancel</button>
+			</div>
+		</div>
+		<script src ="popup.js"></script>
+	</body>
+</html>

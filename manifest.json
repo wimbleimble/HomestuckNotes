@@ -1,0 +1,21 @@
+{
+    "name": "Homestuck Annotations Extension",
+    "version": "1.0",
+    "description": "Vriska did nothing wrong.",
+    "permissions": ["activeTab", "declarativeContent", "storage"],
+    "background": {
+        "scripts": ["background.js"],
+        "persistant": false
+    },
+    "page_action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.homestuck.com/story/*"],
+            "run_at": "document_idle",
+            "js": ["script.js"]
+        }
+    ],
+    "manifest_version": 2
+}
