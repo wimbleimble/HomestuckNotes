@@ -1,7 +1,7 @@
 {
     "name": "Homestuck Annotations Extension",
     "version": "1.0",
-    "description": "Vriska did nothing wrong.",
+    "description": "An extension for writing, sharing and viewing notes written for the webcomic Homestuck.",
     "permissions": ["activeTab", "declarativeContent", "storage"],
     "background": {
         "scripts": ["background.js"],
@@ -17,5 +17,10 @@
             "js": ["script.js"]
         }
     ],
+    "icons": {
+        "16": "icons/Icon_16.png",
+        "48": "icons/icon_48.png",
+        "128": "icons/Icon_128.png"
+    },
     "manifest_version": 2
 }
