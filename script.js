@@ -75,7 +75,7 @@ function updateAnnotations()
 		if(pageNumber == list.annotations[i].page)
 		{
 			let ano = document.createElement("div");
-			ano.innerHTML = "<div class='row bg-hs-gray bg-light-gray--md pad-b-md pad-b-lg--md pos-r'><div class='mar-x-auto disp-bl bg-hs-gray' style = 'max-width: 650px;'>" + list.annotations[i].content + "</div></div>";
+			ano.innerHTML = "<div class='row bg-hs-gray bg-light-gray--md pad-b-md pad-b-lg--md pos-r' style = 'padding-bottom: 15px; padding-top: 10px;'><div class='mar-x-auto disp-bl bg-hs-gray' style = 'max-width: 650px; padding: 15px;'>" + list.annotations[i].content + "</div></div>";
 			commentDiv.appendChild(ano);
 		}
 	}

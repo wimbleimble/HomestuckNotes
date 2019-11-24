@@ -78,7 +78,14 @@ mergeButton.onclick = e =>
 			if(value.listContent != undefined)
 			{
 				newList = value.listContent.concat(file);
-
+				newList = newList.reduce((unique, o) => 
+				{
+					if(!unique.some(oagain => oagain.page === o.page && oagain.content === o.content)) 
+					{
+					  unique.push(o);
+					}
+					return unique;
+				},[]);
 			}
 			else
 			{
