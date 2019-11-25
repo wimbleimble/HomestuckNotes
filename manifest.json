@@ -1,5 +1,5 @@
 {
-    "name": "Homestuck Annotations Extension",
+    "name": "Homestuck Annotations",
     "version": "1.0",
     "description": "An extension for writing, sharing and viewing notes written for the webcomic Homestuck.",
     "permissions": ["activeTab", "declarativeContent", "storage"],
