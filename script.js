@@ -52,7 +52,7 @@ if(isNaN(pageNumber))
 	pageNumber = 1;
 }
 let list;
-chrome.storage.sync.get(["listContent"], value => 
+chrome.storage.local.get(["listContent"], value => 
 {
 	if(value.listContent == undefined)
 	{
@@ -90,5 +90,5 @@ submitButton.addEventListener("click", () =>
 	let newNote = new annotation(pageNumber, text);
 	list.add(newNote);
 	updateAnnotations();
-	chrome.storage.sync.set({"listContent": list.annotations});
+	chrome.storage.local.set({"listContent": list.annotations});
 });

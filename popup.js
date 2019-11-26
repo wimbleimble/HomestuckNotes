@@ -42,7 +42,7 @@ loadButton.onclick = e =>
 }
 saveButton.onclick = e =>
 {
-	chrome.storage.sync.get(["listContent"], value =>
+	chrome.storage.local.get(["listContent"], value =>
 	{
 		if(value != null)
 		{
@@ -56,7 +56,7 @@ deleteButton.onclick = e =>
 }
 confirmButton.onclick = e =>
 {
-	chrome.storage.sync.clear();
+	chrome.storage.local.clear();
 	cancelDelButton.click();
 	refresh();
 }
@@ -70,7 +70,7 @@ cancelLoadButton.onclick = e =>
 }
 mergeButton.onclick = e =>
 {
-	chrome.storage.sync.get(["listContent"], value =>
+	chrome.storage.local.get(["listContent"], value =>
 	{
 		if(file != undefined)
 		{
@@ -91,7 +91,7 @@ mergeButton.onclick = e =>
 			{
 				newList = file;
 			}
-			chrome.storage.sync.set({"listContent": newList});
+			chrome.storage.local.set({"listContent": newList});
 			cancelLoadButton.click();
 			refresh();
 		}
@@ -101,7 +101,7 @@ replaceButton.onclick = e =>
 {
 	if(file != undefined)
 	{
-		chrome.storage.sync.set({"listContent": file});
+		chrome.storage.local.set({"listContent": file});
 		cancelLoadButton.click();
 		refresh();
 	}
